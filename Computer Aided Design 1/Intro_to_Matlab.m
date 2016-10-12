@@ -143,28 +143,53 @@
 % %}
 
 % Problem 6
-r=0.5, n=100, result=1;
-for i=1:n
-    result=result+r^i;
-end
-result
+% r=0.5, n=100, result=1;
+% for i=1:n
+%     result=result+r^i;
+% end
+% result
+% 
+% % Problem 7
+% P=zeros(4,4);
+% P2=zeros(4,4);
+% 
+% for i=1:4 
+%     for j=1:4
+%         n=i+j-2;
+%         k=i-1;
+%         P(j,i)=factorial(n)/factorial(k)*factorial(n-k)
+%         %P2(i,j)=factorial(i-1)/factorial(i+j-2).*factorial((i-1)-(i+j-2)
+%     end
+% end
+% 
+%    Pa=pascal(4)
+%    P-Pa
+%    
+% % Problem 14 
+% t = 0:pi/50:10*pi;
+% plot3(sin(t/2.*c).*cos(t),sin(t/2.*c).*sin(t),cos(t/2.*c))
 
-% Problem 7
-P=zeros(4,4);
-P2=zeros(4,4);
+% x=cos(t).*sqrt(b^2-c^2.*(cos(a.*t).^2))
+% y=sin(t).*sqrt(b^2-c^2.*(cos(a.*t).^2))
+% z=c.*cos(a.*t)
+% t = 0:pi/50:2*pi;
+% plot3(x,y,z)
+% a = 10, b = 1, c = 0.3,
 
-for i=1:4 
-    for j=1:4
-        n=i+j-2;
-        k=i-1;
-        P(j,i)=factorial(n)/factorial(k)*factorial(n-k)
-        %P2(i,j)=factorial(i-1)/factorial(i+j-2).*factorial((i-1)-(i+j-2)
-    end
-end
+% Problem 15
+% function [x1,x2]= quadform2 (a, b, c)
+%     delta= b^2-4*a*c
+%     if delta > 0
+%         x1=(-b-sign(b)*sqrt(delta))/2*a
+%         x2=c/(a*x2)
+%     else 
+%         x1=(-b-sign(b)*sqrt(delta))/2*a
+%         x1=x2
+%     end
+% end 
 
-   Pa=pascal(4)
-   P-Pa
+
    
-
+    
 
 
