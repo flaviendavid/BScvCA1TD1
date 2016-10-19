@@ -1,15 +1,29 @@
 function im = displayRGB(filename)
     imdata = imread(filename);
-    v1 = imdata (:,:,1);
-    v2 = imdata (:,:,2);
-    v3 = imdata (:,:,3);
+    [rows columns dim] = size(imdata);
+    
+    Red = imdata (:,:,1);
+    Green = imdata (:,:,2);
+    Blue = imdata (:,:,3);
+    Black = uint8(zeros(rows, columns));
+    
+    TrueR = [Red,Black,Black];
+    TrueG = [Black,Green,Black];
+    TrueB = [Black,Black,Blue];
+    
+    NewRGB = cat(3, TrueR, TrueG, TrueB);
+    %TrueR2Data = [Red]+[TrueR];
+    
+    %image(imdata)
     
     figure(1)
-    imshow(v1)
+    imshow(image(NewRGB))
     figure(2)
     imshow(v2)
     figure(3)
     imshow(v3)
+    figure(4)
+    imshow(imdata)
 %     mask = ones(800,800);
 %     imdata2 = interp2(imdata,mask);
 %     
